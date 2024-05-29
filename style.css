@@ -19,6 +19,8 @@ body {
     align-items: center;
     padding: 5px;
     font-size: 6px;
+    /* remove when header become responsive */
+    flex-wrap: wrap;
 }
 
 .header .logo {
@@ -48,9 +50,12 @@ body {
 
 /* Hero section */
 .hero-section {
-    background-color: #F5F7FA;
     display: flex;
     padding: 50px 0px;
+}
+
+.wrapper-hero-section {
+    background-color: #F5F7FA;
 }
 
 .hero-section-text {
@@ -292,5 +297,57 @@ body {
     margin-right: 5px;
 }
 
+@media (max-width: 540px) {
+    .hero-section{
+        flex-direction: column-reverse;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero-section img{
+        margin: 0;
+    }
+    .hero-section-text{
+        margin: 0;
+    }
+    .hero-section-text #upper-text{
+        line-height: 1.4rem;
+    }
+    .hero-section-text p{
+        font-size: 1rem;
+    }
+    .hero-section-text button{
+        font-size: 1rem;
+        width: 100px;
+        height: 40px;
+    }
+    .our-clients-section-text h4{
+        font-size: 1.4rem; 
+    }
+    .our-clients-section-text p{
+        font-size: 0.9rem; 
+    }
+    .our-clients-section{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .manage-community-section-text h4{
+        font-size: 1.1rem; 
+    }
+    .manage-community-section-text p{
+        font-size: 0.9rem; 
+    }
+    .manage-community-section-icons{
+        flex-direction: column;
+    }
+    .manage-community-section-icons div{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1.2rem;
+    }
+    .manage-community-section-icons div p{
+        font-size: 0.8rem;
+    }
+}
 
 /* Helping local business section end */
